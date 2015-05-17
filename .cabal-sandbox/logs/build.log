@@ -1,0 +1,975 @@
+
+package: cairo-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: cairo_svg cairo_ps cairo_pdf
+dependencies: utf8-string-1 text-1.2.0.6 mtl-2.1.3.1
+              bytestring-0.10.4.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: ConfigureFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: diagrams-cairo-1.2.0.7
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: vector-0.10.12.3 unix-2.7.0.1 transformers-0.3.0.0
+              time-1.4.2 statestack-0.2.0.4 split-0.2.2 process-1.2.0.0
+              pango-0.13.1.0 optparse-applicative-0.11.0.2 old-time-1.1.0.2
+              mtl-2.1.3.1 lens-4.9.1 hashable-1.2.3.2 filepath-1.3.0.2
+              directory-1.2.1.0 diagrams-lib-1.2.0.9 diagrams-core-1.2.0.6
+              data-default-class-0.0.1 containers-0.5.5.1 colour-2.3.3
+              cairo-0.13.1.0 bytestring-0.10.4.0 base-4.7.0.2 JuicyPixels-3.2.4
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: diagrams-gtk-1.0.1.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: gtk-0.13.6 diagrams-lib-1.2.0.9
+              diagrams-cairo-1.2.0.7 cairo-0.13.1.0 base-4.7.0.2
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gio-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: mtl-2.1.3.1 glib-0.13.1.0 containers-0.5.5.1
+              bytestring-0.10.4.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: glib-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: closure_signals
+dependencies: utf8-string-1 text-1.2.0.6 containers-0.5.5.1
+              bytestring-0.10.4.0 base-4.7.0.2
+install-outcome: ConfigureFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gtk-0.13.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -have-quartz-gtk have-gio fmode-binary deprecated
+dependencies: text-1.2.0.6 pango-0.13.1.0 mtl-2.1.3.1 glib-0.13.1.0
+              gio-0.13.1.0 containers-0.5.5.1 cairo-0.13.1.0 bytestring-0.10.4.0
+              base-4.7.0.2 array-0.5.0.0
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: mosaico-lib-0.1.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 stm-chans-3.0.0.3 stm-2.4.4
+              split-0.2.2 mtl-2.1.3.1 gtk-0.13.6 glib-0.13.1.0
+              diagrams-lib-1.2.0.9 diagrams-gtk-1.0.1.3 diagrams-core-1.2.0.6
+              diagrams-cairo-1.2.0.7 colour-2.3.3 base-unicode-symbols-0.2.2.4
+              base-4.7.0.2 JuicyPixels-3.2.4
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: pango-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: new-exception
+dependencies: text-1.2.0.6 process-1.2.0.0 pretty-1.1.1.1
+              mtl-2.1.3.1 glib-0.13.1.0 directory-1.2.1.0 containers-0.5.5.1
+              cairo-0.13.1.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Boolean-0.2.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: JuicyPixels-3.2.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -mmap
+dependencies: zlib-0.6.1.1 vector-0.10.12.3 transformers-0.3.0.0
+              primitive-0.6 mtl-2.1.3.1 deepseq-1.3.0.2 containers-0.5.5.1
+              bytestring-0.10.4.0 binary-0.7.1.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: MemoTrie-0.6.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: void-0.7 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: NumInstances-1.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: StateVar-1.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 stm-2.4.4 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: active-0.1.0.19
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: vector-space-0.10.2 semigroups-0.16.2.2
+              semigroupoids-4.3 newtype-0.2 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: adjunctions-4.2.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: void-0.7 transformers-0.3.0.0 tagged-0.8.0.1
+              semigroups-0.16.2.2 semigroupoids-4.3 profunctors-4.4.1 mtl-2.1.3.1
+              free-4.12.1 distributive-0.4.4 contravariant-1.3.1.1
+              containers-0.5.5.1 comonad-4.2.6 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: ansi-terminal-0.6.2.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -example
+dependencies: unix-2.7.0.1 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: ansi-wl-pprint-0.6.7.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: newbase -example
+dependencies: base-4.7.0.2 ansi-terminal-0.6.2.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: base-unicode-symbols-0.2.2.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -old-base
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: bifunctors-4.2.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: tagged-0.8.0.1 semigroups-0.16.2.2 semigroupoids-4.3
+              base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: colour-2.3.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: comonad-4.2.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: test-doctests distributive contravariant containers
+dependencies: transformers-compat-0.4.0.3 transformers-0.3.0.0
+              tagged-0.8.0.1 semigroups-0.16.2.2 distributive-0.4.4
+              contravariant-1.3.1.1 containers-0.5.5.1 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: contravariant-1.3.1.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: tagged statevar semigroups
+dependencies: void-0.7 transformers-compat-0.4.0.3
+              transformers-0.3.0.0 semigroups-0.16.2.2 base-4.7.0.2
+              StateVar-1.1.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: data-default-class-0.0.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: diagrams-core-1.2.0.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: vector-space-points-0.2.1.1 vector-space-0.10.2
+              semigroups-0.16.2.2 newtype-0.2 monoid-extras-0.3.3.5 lens-4.9.1
+              dual-tree-0.2.0.6 containers-0.5.5.1 base-4.7.0.2 MemoTrie-0.6.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: diagrams-lib-1.2.0.9
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: vector-space-points-0.2.1.1 vector-space-0.10.2
+              tagged-0.8.0.1 semigroups-0.16.2.2 optparse-applicative-0.11.0.2
+              monoid-extras-0.3.3.5 lens-4.9.1 intervals-0.7.1 hashable-1.2.3.2
+              fingertree-0.1.0.2 filepath-1.3.0.2 dual-tree-0.2.0.6
+              diagrams-core-1.2.0.6 data-default-class-0.0.1 containers-0.5.5.1
+              colour-2.3.3 base-4.7.0.2 array-0.5.0.0 active-0.1.0.19
+              MemoTrie-0.6.2 JuicyPixels-3.2.4
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: distributive-0.4.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -lib-werror
+dependencies: transformers-compat-0.4.0.3 transformers-0.3.0.0
+              tagged-0.8.0.1 ghc-prim-0.3.1.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: dual-tree-0.2.0.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: semigroups-0.16.2.2 newtype-0.2 monoid-extras-0.3.3.5
+              base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: exceptions-0.8.0.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-compat-0.4.0.3 transformers-0.3.0.0
+              stm-2.4.4 mtl-2.1.3.1 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: fingertree-0.1.0.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: free-4.12.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 template-haskell-2.9.0.0
+              semigroups-0.16.2.2 semigroupoids-4.3 profunctors-4.4.1
+              prelude-extras-0.4 mtl-2.1.3.1 exceptions-0.8.0.2
+              distributive-0.4.4 comonad-4.2.6 bifunctors-4.2.1 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: groups-0.4.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: hashable-1.2.3.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -sse41 sse2 integer-gmp
+dependencies: text-1.2.0.6 integer-gmp-0.5.1.0 ghc-prim-0.3.1.0
+              bytestring-0.10.4.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: intervals-0.7.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: test-doctests
+dependencies: ghc-prim-0.3.1.0 distributive-0.4.4 base-4.7.0.2
+              array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: kan-extensions-4.2.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 tagged-0.8.0.1 semigroupoids-4.3
+              mtl-2.1.3.1 free-4.12.1 distributive-0.4.4 contravariant-1.3.1.1
+              containers-0.5.5.1 comonad-4.2.6 base-4.7.0.2 array-0.5.0.0
+              adjunctions-4.2.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: lens-4.9.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: trustworthy test-properties test-hunit test-hlint
+       test-doctests -safe -old-inline-pragmas -lib-werror -j inlining
+       -dump-splices -benchmark-uniplate
+dependencies: void-0.7 vector-0.10.12.3
+              unordered-containers-0.2.5.1 transformers-compat-0.4.0.3
+              transformers-0.3.0.0 text-1.2.0.6 template-haskell-2.9.0.0
+              tagged-0.8.0.1 semigroups-0.16.2.2 semigroupoids-4.3
+              reflection-1.5.2.1 profunctors-4.4.1 parallel-3.2.0.6 mtl-2.1.3.1
+              kan-extensions-4.2.2 hashable-1.2.3.2 ghc-prim-0.3.1.0 free-4.12.1
+              filepath-1.3.0.2 exceptions-0.8.0.2 distributive-0.4.4
+              contravariant-1.3.1.1 containers-0.5.5.1 comonad-4.2.6
+              bytestring-0.10.4.0 bifunctors-4.2.1 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: monoid-extras-0.3.3.5
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: semigroups-0.16.2.2 semigroupoids-4.3 groups-0.4.0.0
+              base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: mtl-2.1.3.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: nats-1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: hashable
+dependencies: hashable-1.2.3.2 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: newtype-0.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: optparse-applicative-0.11.0.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-compat-0.4.0.3 transformers-0.3.0.0
+              process-1.2.0.0 base-4.7.0.2 ansi-wl-pprint-0.6.7.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: parallel-3.2.0.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: deepseq-1.3.0.2 containers-0.5.5.1 base-4.7.0.2
+              array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: prelude-extras-0.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: primitive-0.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 ghc-prim-0.3.1.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: profunctors-4.4.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 tagged-0.8.0.1 semigroupoids-4.3
+              distributive-0.4.4 comonad-4.2.6 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: reflection-1.5.2.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: template-haskell -slow
+dependencies: template-haskell-2.9.0.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: semigroupoids-4.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: doctests distributive contravariant containers comonad
+dependencies: transformers-compat-0.4.0.3 transformers-0.3.0.0
+              semigroups-0.16.2.2 distributive-0.4.4 contravariant-1.3.1.1
+              containers-0.5.5.1 comonad-4.2.6 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: semigroups-0.16.2.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: unordered-containers text hashable deepseq containers
+       bytestring
+dependencies: unordered-containers-0.2.5.1 text-1.2.0.6 nats-1
+              hashable-1.2.3.2 deepseq-1.3.0.2 containers-0.5.5.1
+              bytestring-0.10.4.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: split-0.2.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: statestack-0.2.0.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-compat-0.4.0.3 transformers-0.3.0.0
+              mtl-2.1.3.1 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: stm-2.4.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: stm-chans-3.0.0.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: stm-2.4.4 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: tagged-0.8.0.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: template-haskell-2.9.0.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: text-1.2.0.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -integer-simple -developer
+dependencies: integer-gmp-0.5.1.0 ghc-prim-0.3.1.0 deepseq-1.3.0.2
+              bytestring-0.10.4.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: transformers-compat-0.4.0.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -two three mtl
+dependencies: transformers-0.3.0.0 mtl-2.1.3.1 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: unordered-containers-0.2.5.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -debug
+dependencies: hashable-1.2.3.2 deepseq-1.3.0.2 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: utf8-string-1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: bytestring-0.10.4.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: vector-0.10.12.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -unsafechecks -internalchecks boundschecks
+dependencies: primitive-0.6 ghc-prim-0.3.1.0 deepseq-1.3.0.2
+              base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: vector-space-0.10.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: base-4.7.0.2 NumInstances-1.4 MemoTrie-0.6.2
+              Boolean-0.2.3
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: vector-space-points-0.2.1.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: vector-space-0.10.2 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: void-0.7
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -safe
+dependencies: semigroups-0.16.2.2 hashable-1.2.3.2 ghc-prim-0.3.1.0
+              base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: zlib-0.6.1.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: bytestring-0.10.4.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: cairo-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: cairo_svg cairo_ps cairo_pdf
+dependencies: utf8-string-1 text-1.2.0.6 mtl-2.1.3.1
+              bytestring-0.10.4.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: ConfigureFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gio-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: mtl-2.1.3.1 glib-0.13.1.0 containers-0.5.5.1
+              bytestring-0.10.4.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: glib-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: closure_signals
+dependencies: utf8-string-1 text-1.2.0.6 containers-0.5.5.1
+              bytestring-0.10.4.0 base-4.7.0.2
+install-outcome: ConfigureFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gtk-0.13.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -have-quartz-gtk have-gio fmode-binary deprecated
+dependencies: text-1.2.0.6 pango-0.13.1.0 mtl-2.1.3.1 glib-0.13.1.0
+              gio-0.13.1.0 containers-0.5.5.1 cairo-0.13.1.0 bytestring-0.10.4.0
+              base-4.7.0.2 array-0.5.0.0
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: pango-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: new-exception
+dependencies: text-1.2.0.6 process-1.2.0.0 pretty-1.1.1.1
+              mtl-2.1.3.1 glib-0.13.1.0 directory-1.2.1.0 containers-0.5.5.1
+              cairo-0.13.1.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: DependencyFailed glib-0.13.1.0
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gtk2hs-buildtools-0.13.0.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: closuresignals
+dependencies: random-1.1 process-1.2.0.0 pretty-1.1.1.1
+              hashtables-1.2.0.2 filepath-1.3.0.2 directory-1.2.1.0
+              containers-0.5.5.1 base-4.7.0.2 array-0.5.0.0
+install-outcome: ConfigureFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: hashtables-1.2.0.2
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: unsafe-tricks -sse42 -portable -debug -bounds-checking
+dependencies: vector-0.10.12.3 primitive-0.6 hashable-1.2.3.2
+              ghc-prim-0.3.1.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: random-1.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: time-1.4.2 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: alex-3.1.4
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: small_base
+dependencies: directory-1.2.1.0 containers-0.5.5.1 base-4.7.0.2
+              array-0.5.0.0 QuickCheck-2.8.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: QuickCheck-2.8.1
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: templatehaskell -base4point8 base4 base3
+dependencies: transformers-0.3.0.0 tf-random-0.5
+              template-haskell-2.9.0.0 random-1.1 containers-0.5.5.1 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: tf-random-0.5
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: time-1.4.2 random-1.1 primitive-0.6 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gtk2hs-buildtools-0.13.0.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: closuresignals
+dependencies: random-1.1 process-1.2.0.0 pretty-1.1.1.1
+              hashtables-1.2.0.2 filepath-1.3.0.2 directory-1.2.1.0
+              containers-0.5.5.1 base-4.7.0.2 array-0.5.0.0
+install-outcome: ConfigureFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: happy-1.19.5
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: small_base
+dependencies: mtl-2.1.3.1 containers-0.5.5.1 base-4.7.0.2
+              array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gtk2hs-buildtools-0.13.0.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: closuresignals
+dependencies: random-1.1 process-1.2.0.0 pretty-1.1.1.1
+              hashtables-1.2.0.2 filepath-1.3.0.2 directory-1.2.1.0
+              containers-0.5.5.1 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: cairo-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: cairo_svg cairo_ps cairo_pdf
+dependencies: utf8-string-1 text-1.2.0.6 mtl-2.1.3.1
+              bytestring-0.10.4.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: diagrams-cairo-1.2.0.7
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: vector-0.10.12.3 unix-2.7.0.1 transformers-0.3.0.0
+              time-1.4.2 statestack-0.2.0.4 split-0.2.2 process-1.2.0.0
+              pango-0.13.1.0 optparse-applicative-0.11.0.2 old-time-1.1.0.2
+              mtl-2.1.3.1 lens-4.9.1 hashable-1.2.3.2 filepath-1.3.0.2
+              directory-1.2.1.0 diagrams-lib-1.2.0.9 diagrams-core-1.2.0.6
+              data-default-class-0.0.1 containers-0.5.5.1 colour-2.3.3
+              cairo-0.13.1.0 bytestring-0.10.4.0 base-4.7.0.2 JuicyPixels-3.2.4
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: diagrams-gtk-1.0.1.3
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: gtk-0.13.6 diagrams-lib-1.2.0.9
+              diagrams-cairo-1.2.0.7 cairo-0.13.1.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gio-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: mtl-2.1.3.1 glib-0.13.1.0 containers-0.5.5.1
+              bytestring-0.10.4.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: glib-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: closure_signals
+dependencies: utf8-string-1 text-1.2.0.6 containers-0.5.5.1
+              bytestring-0.10.4.0 base-4.7.0.2
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: gtk-0.13.6
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: -have-quartz-gtk have-gio fmode-binary deprecated
+dependencies: text-1.2.0.6 pango-0.13.1.0 mtl-2.1.3.1 glib-0.13.1.0
+              gio-0.13.1.0 containers-0.5.5.1 cairo-0.13.1.0 bytestring-0.10.4.0
+              base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: mosaico-lib-0.1.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+dependencies: transformers-0.3.0.0 stm-chans-3.0.0.3 stm-2.4.4
+              split-0.2.2 mtl-2.1.3.1 gtk-0.13.6 glib-0.13.1.0
+              diagrams-lib-1.2.0.9 diagrams-gtk-1.0.1.3 diagrams-core-1.2.0.6
+              diagrams-cairo-1.2.0.7 colour-2.3.3 base-unicode-symbols-0.2.2.4
+              base-4.7.0.2 JuicyPixels-3.2.4
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: pango-0.13.1.0
+os: linux
+arch: x86_64
+compiler: ghc-7.8.4
+client: cabal-install-1.22.3.0
+flags: new-exception
+dependencies: text-1.2.0.6 process-1.2.0.0 pretty-1.1.1.1
+              mtl-2.1.3.1 glib-0.13.1.0 directory-1.2.1.0 containers-0.5.5.1
+              cairo-0.13.1.0 base-4.7.0.2 array-0.5.0.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried

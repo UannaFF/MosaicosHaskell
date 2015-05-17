@@ -4,7 +4,7 @@ module Imagen
   )
   where
 
-import Graphics.Mosaico.Imagen (Color(Color, rojo, verde, azul), Imagen(Imagen, altura, anchura, datos))
+import Graphics.Mosaico.Imagen (Color(Color, rojo, verde, azul), Imagen(Imagen, altura, anchura, datos),leerImagen)
 
 
 
