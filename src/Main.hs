@@ -21,4 +21,5 @@ main = do
 		(filename:_) -> do
 			results <- (leerImagen filename)
 			let imagen = getImagen results
-			print imagen
+			let rectan = rectánguloImagen imagen
+			print rectan

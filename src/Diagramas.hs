@@ -9,14 +9,14 @@ module
   where
 
 import Graphics.Mosaico.Diagrama (Diagrama((:-:), (:|:), Hoja), Paso(Primero, Segundo), Rectángulo(Rectángulo, color, imagen))
-import Graphics.Mosaico.Imagen   (Imagen(Imagen, altura, anchura, datos))
+import Graphics.Mosaico.Imagen   (Imagen(Imagen, altura, anchura, datos), Color(Color, rojo, verde, azul))
 
 import Imagen (colorPromedio, hSplit, vSplit)
 
 
 
 rectánguloImagen :: Imagen -> Rectángulo
-rectánguloImagen = undefined
+rectánguloImagen imagen = Rectángulo (Color 1 2 3) imagen
 
 data Orientación
   = Horizontal
@@ -24,7 +24,7 @@ data Orientación
   deriving Show
 
 dividir :: Orientación -> Rectángulo -> Maybe Diagrama
-dividir = undefined
+dividir o rect = case num
 
 caminar :: [Paso] -> Diagrama -> Maybe Diagrama
 caminar = undefined
