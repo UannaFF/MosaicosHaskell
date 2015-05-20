@@ -14,7 +14,6 @@ import Graphics.Mosaico.Imagen   (Imagen(Imagen, altura, anchura, datos), Color(
 import Imagen (colorPromedio, hSplit, vSplit)
 
 
-
 rectánguloImagen :: Imagen -> Rectángulo
 rectánguloImagen imagen = Rectángulo (colorPromedio imagen) imagen
 
@@ -24,13 +23,13 @@ data Orientación
   deriving Show
 
 dividir :: Orientación -> Rectángulo -> Maybe Diagrama
-dividir o (Rectángulo _ (Imagen alt anch dat)) = case o of
+dividir o (Rectángulo _ (Imagen anch alt dat)) = case o of
                                               Horizontal -> if alt < 2 then Nothing else 
                                                             Just ((Hoja (rectánguloImagen (fst split))) :-: (Hoja (rectánguloImagen (snd split))))
-                                                            where split = hSplit (Imagen alt anch dat)
+                                                            where split = hSplit (Imagen anch alt dat)
                                               Vertical -> if anch < 2 then Nothing else
                                                             Just ((Hoja (rectánguloImagen (fst split))) :|: (Hoja (rectánguloImagen (snd split))))
-                                                            where split = vSplit (Imagen alt anch dat)
+                                                            where split = vSplit (Imagen anch alt dat)
 
 caminar :: [Paso] -> Diagrama -> Maybe Diagrama
 caminar (pas:pasos) diagramis = case pas of
