@@ -1,19 +1,18 @@
 module Main (main) where
 
-import System.Environment  (getArgs, getProgName)
+import System.Environment  (getArgs)
 import Graphics.Mosaico.Diagrama (Diagrama((:-:), (:|:), Hoja), Paso(Primero, Segundo))
 import Graphics.Mosaico.Imagen
 import Graphics.Mosaico.Ventana  (Ventana, cerrar, crearVentana, leerTecla, mostrar)
 
 import Diagramas (Orientación(Horizontal, Vertical), caminar, dividir, rectánguloImagen, sustituir)
-import Imagen
 
 ciclo :: Ventana -> Diagrama -> [Paso] -> IO ()
 ciclo ventana diagrama pasos = do
 								let diag_caminado = case (caminar pasos diagrama) of
 														Just new_diag -> new_diag
 														Nothing -> diagrama
-								nueva_ventana <- (mostrar ventana pasos diagrama)
+								mostrar ventana pasos diagrama
 								tecla <- (leerTecla ventana)
 								case tecla of
 									Nothing -> ciclo ventana diagrama pasos
@@ -28,7 +27,7 @@ ciclo ventana diagrama pasos = do
 																	Nothing -> ciclo ventana diagrama pasos
 																	where 
 																		dividendo = dividir Vertical hojita
-															a :|: b -> ciclo ventana diagrama (pasos++[Primero])
+															_ :|: _ -> ciclo ventana diagrama (pasos++[Primero])
 															_ -> ciclo ventana diagrama pasos
 												"Right" -> case diag_caminado of
 															Hoja hojita -> do 
@@ -37,7 +36,7 @@ ciclo ventana diagrama pasos = do
 																	Nothing -> ciclo ventana diagrama pasos
 																	where 
 																		dividendo = dividir Vertical hojita
-															a :|: b -> ciclo ventana diagrama (pasos++[Segundo])
+															_ :|: _ -> ciclo ventana diagrama (pasos++[Segundo])
 															_ -> ciclo ventana diagrama pasos
 												"Up" -> case diag_caminado of
 															Hoja hojita -> do 
@@ -46,7 +45,7 @@ ciclo ventana diagrama pasos = do
 																	Nothing -> ciclo ventana diagrama pasos
 																	where 
 																		dividendo = dividir Horizontal hojita
-															a :-: b -> ciclo ventana diagrama (pasos++[Primero])
+															_ :-: _ -> ciclo ventana diagrama (pasos++[Primero])
 															_ -> ciclo ventana diagrama pasos
 												"Down" -> case diag_caminado of
 															Hoja hojita -> do 
@@ -55,21 +54,19 @@ ciclo ventana diagrama pasos = do
 																	Nothing -> ciclo ventana diagrama pasos
 																	where 
 																		dividendo = dividir Horizontal hojita
-															a :-: b -> ciclo ventana diagrama (pasos++[Segundo])
+															_ :-: _ -> ciclo ventana diagrama (pasos++[Segundo])
 															_ -> ciclo ventana diagrama pasos
 												_ -> ciclo ventana diagrama pasos
 
 -- Para tomar los datos del IO de leerImagen
 getImagen :: Either String Imagen -> Maybe Imagen
-getImagen (Right (Imagen an al datos)) = Just (Imagen an al datos)
+getImagen (Right (Imagen an al dat)) = Just (Imagen an al dat)
 getImagen (Left _) =  Nothing
 
 getAnchura :: Imagen -> Integer
-getAnchura (Imagen an al d) = an
+getAnchura (Imagen an _ _) = an
 getAltura :: Imagen -> Integer
-getAltura (Imagen an al d) = al
-
-pegate x = pegate x
+getAltura (Imagen _ al _) = al
 
 main :: IO ()
 main = do
