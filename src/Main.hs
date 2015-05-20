@@ -30,6 +30,13 @@ main = do
 			--print colorPromedio (fst top)
 			print "Deberia ser 66, 76, 109"
 			print "Color segunda fila:"
+			let rect = rectánguloImagen imagen
+			let diag = dividir Vertical rect
+			case diag of
+				Just di -> do 
+							let diag2 = (caminar [Primero] di)
+							print diag2
+				Nothing -> print "Nothing"
 			--print colorPromedio (snd top)
 		[] -> do
 			print "No se especifico imagen"

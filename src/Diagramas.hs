@@ -24,10 +24,25 @@ data Orientación
   deriving Show
 
 dividir :: Orientación -> Rectángulo -> Maybe Diagrama
-dividir o rect = case num
+dividir o (Rectángulo _ (Imagen alt anch dat)) = case o of
+                                              Horizontal -> if alt < 2 then Nothing else 
+                                                            Just ((Hoja (rectánguloImagen (fst split))) :-: (Hoja (rectánguloImagen (snd split))))
+                                                            where split = hSplit (Imagen alt anch dat)
+                                              Vertical -> if anch < 2 then Nothing else
+                                                            Just ((Hoja (rectánguloImagen (fst split))) :|: (Hoja (rectánguloImagen (snd split))))
+                                                            where split = vSplit (Imagen alt anch dat)
 
 caminar :: [Paso] -> Diagrama -> Maybe Diagrama
-caminar = undefined
+caminar (pas:pasos) diagramis = case pas of
+                                  Primero -> case diagramis of
+                                                Hoja _ -> Nothing
+                                                diagP :-: _ -> caminar pasos diagP
+                                                diagP :|: _ -> caminar pasos diagP
+                                  Segundo -> case diagramis of
+                                                Hoja _ -> Nothing
+                                                _ :-: diagS -> caminar pasos diagS
+                                                _ :|: diagS -> caminar pasos diagS
+caminar [] diagramis = Just diagramis
 
 sustituir :: Diagrama -> [Paso] -> Diagrama -> Diagrama
 sustituir = undefined
