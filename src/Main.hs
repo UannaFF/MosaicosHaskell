@@ -10,17 +10,59 @@ import Imagen
 
 ciclo :: Ventana -> Diagrama -> [Paso] -> IO ()
 ciclo ventana diagrama pasos = do
-								nueva_ventana <- (mostrar ventana [] diagrama)
+								let diag_caminado = case (caminar pasos diagrama) of
+														Just new_diag -> new_diag
+														Nothing -> diagrama
+								nueva_ventana <- (mostrar ventana pasos diagrama)
 								tecla <- (leerTecla ventana)
 								case tecla of
 									Nothing -> ciclo ventana diagrama pasos
 									Just s -> case s of
 												"q" -> cerrar ventana
+												"BackSpace" -> if (null pasos) then ciclo ventana diagrama pasos
+																else ciclo ventana diagrama (init pasos)
+												"Left" -> case diag_caminado of
+															Hoja hojita -> do 
+																case dividendo of
+																	Just new_diag -> ciclo ventana (sustituir new_diag pasos diagrama) (pasos++[Primero])
+																	Nothing -> ciclo ventana diagrama pasos
+																	where 
+																		dividendo = dividir Vertical hojita
+															a :|: b -> ciclo ventana diagrama (pasos++[Primero])
+															_ -> ciclo ventana diagrama pasos
+												"Right" -> case diag_caminado of
+															Hoja hojita -> do 
+																case dividendo of
+																	Just new_diag -> ciclo ventana (sustituir new_diag pasos diagrama) (pasos++[Segundo])
+																	Nothing -> ciclo ventana diagrama pasos
+																	where 
+																		dividendo = dividir Vertical hojita
+															a :|: b -> ciclo ventana diagrama (pasos++[Segundo])
+															_ -> ciclo ventana diagrama pasos
+												"Up" -> case diag_caminado of
+															Hoja hojita -> do 
+																case dividendo of
+																	Just new_diag -> ciclo ventana (sustituir new_diag pasos diagrama) (pasos++[Primero])
+																	Nothing -> ciclo ventana diagrama pasos
+																	where 
+																		dividendo = dividir Horizontal hojita
+															a :-: b -> ciclo ventana diagrama (pasos++[Primero])
+															_ -> ciclo ventana diagrama pasos
+												"Down" -> case diag_caminado of
+															Hoja hojita -> do 
+																case dividendo of
+																	Just new_diag -> ciclo ventana (sustituir new_diag pasos diagrama) (pasos++[Segundo])
+																	Nothing -> ciclo ventana diagrama pasos
+																	where 
+																		dividendo = dividir Horizontal hojita
+															a :-: b -> ciclo ventana diagrama (pasos++[Segundo])
+															_ -> ciclo ventana diagrama pasos
+												_ -> ciclo ventana diagrama pasos
 
 -- Para tomar los datos del IO de leerImagen
-getImagen :: Either String Imagen -> Imagen
-getImagen (Right (Imagen an al datos)) = Imagen an al datos
-getImagen (Left _) =  Imagen 1 1 [[Color {rojo = 0, verde = 0, azul = 0}]]
+getImagen :: Either String Imagen -> Maybe Imagen
+getImagen (Right (Imagen an al datos)) = Just (Imagen an al datos)
+getImagen (Left _) =  Nothing
 
 getAnchura :: Imagen -> Integer
 getAnchura (Imagen an al d) = an
@@ -33,11 +75,16 @@ main :: IO ()
 main = do
 	args <- getArgs
 	case args of
-		(filename:_) -> do
+		(filename:[]) -> do
 			results <- (leerImagen filename)
-			let imagen = getImagen results
-			let rect = rectánguloImagen imagen
-			ventana <- (crearVentana (getAnchura imagen) (getAltura imagen))
-			ciclo ventana (Hoja rect) []
+			case (getImagen results) of
+				Just i -> do
+							let imagen = i
+							let rect = rectánguloImagen imagen
+							ventana <- (crearVentana (getAnchura imagen) (getAltura imagen))
+							ciclo ventana (Hoja rect) []
+				Nothing -> print "El archivo especificado no existe."
 		[] -> do
-			print "No se especifico imagen"
+			print "No se especifico ninguna imagen."
+		_ -> do
+			print "Se tiene que pasar exactamente un parametro -> direccion a una foto"
