@@ -24,12 +24,5 @@ main = do
 			results <- (leerImagen filename)
 			let imagen = getImagen results
 			print imagen
-			let h = hSplit imagen
-			let top = hSplit (fst h)
-			print "Color primera fila:"
-			--print colorPromedio (fst top)
-			print "Deberia ser 66, 76, 109"
-			print "Color segunda fila:"
-			--print colorPromedio (snd top)
 		[] -> do
 			print "No se especifico imagen"

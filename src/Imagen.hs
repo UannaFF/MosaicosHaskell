@@ -5,6 +5,7 @@ module Imagen
   where
 
 import Graphics.Mosaico.Imagen (Color(Color, rojo, verde, azul), Imagen(Imagen, altura, anchura, datos),leerImagen)
+import Data.List (foldl')
 
 
 corteVertical :: [[Color]] -> Integer -> Integer -> [[Color]]
@@ -32,4 +33,12 @@ vSplit img@(Imagen an al datos) = (subImagen 0 0 (half an) al img, subImagen (ha
 	where half x = if even x then div x 2 else (div x 2) + 1
 
 colorPromedio :: Imagen -> Color
-colorPromedio (Imagen an al c) = Color {rojo = 0, verde = 0, azul = 0} 
+colorPromedio (Imagen an al datos) = Color {rojo = r, verde = v, azul = a}
+	where 
+		red a x = a + (foldl (+) 0 (map toInteger (map rojo x)))
+		green a x = a + (foldl (+) 0 (map toInteger (map verde x)))
+		blue a x = a + (foldl (+) 0 (map toInteger (map azul x)))
+		r = round ( ( fromInteger (foldl' red 0 datos) ) / (fromInteger (an*al)) )
+		v = round ( ( fromInteger (foldl' green 0 datos) ) / (fromInteger (an*al)) )
+		a = round ( ( fromInteger (foldl' blue 0 datos) ) / (fromInteger (an*al)) )
+		  
