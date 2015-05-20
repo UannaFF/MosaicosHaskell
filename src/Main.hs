@@ -35,6 +35,9 @@ main = do
 			case diag of
 				Just di -> do 
 							let diag2 = (caminar [Primero] di)
+							print "diag1: "
+							print diag
+							print "diag2: "
 							print diag2
 				Nothing -> print "Nothing"
 			--print colorPromedio (snd top)

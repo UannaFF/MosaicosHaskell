@@ -45,4 +45,13 @@ caminar (pas:pasos) diagramis = case pas of
 caminar [] diagramis = Just diagramis
 
 sustituir :: Diagrama -> [Paso] -> Diagrama -> Diagrama
-sustituir = undefi
+sustituir diag1 (paso:pasos) diag2 = case paso of
+                                      Primero -> case diag2 of
+                                                Hoja _ -> diag2
+                                                diagP :-: diagS -> (sustituir diag1 pasos diagP) :-: diagS
+                                                diagP :|: diagS -> (sustituir diag1 pasos diagP) :|: diagS
+                                      Segundo -> case diag2 of
+                                                Hoja _ -> diag2
+                                                diagP :-: diagS -> diagP :-: (sustituir diag1 pasos diagS)
+                                                diagP :|: diagS -> diagP :|: (sustituir diag1 pasos diagS)
+sustituir diag1 [] diag2 = diag1
