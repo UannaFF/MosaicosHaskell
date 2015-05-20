@@ -17,11 +17,17 @@ ciclo ventana diagrama pasos = do
 									Just s -> case s of
 												"q" -> cerrar ventana
 
-
 -- Para tomar los datos del IO de leerImagen
 getImagen :: Either String Imagen -> Imagen
 getImagen (Right (Imagen an al datos)) = Imagen an al datos
 getImagen (Left _) =  Imagen 1 1 [[Color {rojo = 0, verde = 0, azul = 0}]]
+
+getAnchura :: Imagen -> Integer
+getAnchura (Imagen an al d) = an
+getAltura :: Imagen -> Integer
+getAltura (Imagen an al d) = al
+
+pegate x = pegate x
 
 main :: IO ()
 main = do
@@ -31,7 +37,7 @@ main = do
 			results <- (leerImagen filename)
 			let imagen = getImagen results
 			let rect = rectánguloImagen imagen
-			ventana <- crearVentana 200 200
+			ventana <- (crearVentana (getAnchura imagen) (getAltura imagen))
 			ciclo ventana (Hoja rect) []
 		[] -> do
 			print "No se especifico imagen"
