@@ -45,4 +45,4 @@ caminar (pas:pasos) diagramis = case pas of
 caminar [] diagramis = Just diagramis
 
 sustituir :: Diagrama -> [Paso] -> Diagrama -> Diagrama
-sustituir = undefined
+sustituir = undefi
